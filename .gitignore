@@ -1,0 +1,14 @@
+# Build-Verzeichnis mit allen temporären Dateien
+/build/
+
+# Generierte PDF-Datei
+*.pdf
+
+# Python Virtual Environment
+/venv/
+
+# System- und Editor-Dateien
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
