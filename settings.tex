@@ -1,42 +1,70 @@
-% --- GRUNDEINSTELLUNGEN ---
+% settings.tex
+
+% --- GRUNDEINSTELLUNGEN & SPRACHE ---
 \usepackage[ngerman]{babel}
 \usepackage{fontspec}
 \setmainfont{Arial}
 
-% --- SEITENLAYOUT ---
+% --- SEITENLAYOUT & ABSÄTZE ---
 \usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 \usepackage{setspace}
 \onehalfspacing
 \setlength{\parskip}{6pt}
 \setlength{\parindent}{0pt}
 
-% --- TITELFORMATIERUNG ---
-\usepackage{titlesec}
-\titleformat{\section}{\normalfont\fontsize{12}{14}\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}{\normalfont\fontsize{12}{14}\bfseries}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}{\normalfont\fontsize{12}{14}\bfseries}{\thesubsubsection}{1em}{}
-
-% --- KOPF-/FUSSZEILE UND FUSSNOTEN ---
-\usepackage{fancyhdr}
-\usepackage{footmisc}
-\pagestyle{fancy}
-\fancyhf{}
+% --- KOPF-, FUSSZEILE & FUSSNOTEN (KOMA-WEG) ---
+\usepackage{scrlayer-scrpage}
+\clearpairofpagestyles
 \cfoot{\thepage}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footnotelayout}{\fontsize{10}{12}\selectfont}
+\setkomafont{footnote}{\fontsize{10}{12}\selectfont}
+
+% --- ÜBERSCHRIFTEN (KOMA-WEG) ---
+\setkomafont{section}{\normalfont\fontsize{12}{14}\bfseries}
+\setkomafont{subsection}{\normalfont\fontsize{11}{13}\bfseries}
+\setkomafont{subsubsection}{\normalfont\fontsize{11}{13}\itshape}
+
+% --- VERZEICHNISSE & TYPOGRAFIE ---
+% Stellt die Überschriften der Verzeichnisse (z.B. "Inhaltsverzeichnis") auf fette Schrift in Textgröße ein
+\setkomafont{disposition}{\normalfont\bfseries}
+
+% Setzt die Schriftgröße für die Einträge in allen Verzeichnissen auf die normale Textgröße (11pt)
+\DeclareTOCStyleEntry[
+	font=\normalsize,
+	linefill=\TOCLineLeaderFill % Füll-Punkte für section-Ebene
+]{section}{section}
+
+\DeclareTOCStyleEntry[
+	font=\normalsize
+]{subsection}{subsection}
+
+\DeclareTOCStyleEntry[
+	font=\normalsize
+]{subsubsection}{subsubsection}
+
+% Anpassung für Abbildungs- und Tabellenverzeichnis
+\DeclareTOCStyleEntry[
+	font=\normalsize,
+	linefill=\TOCLineLeaderFill
+]{figure}{figure}
+
+\DeclareTOCStyleEntry[
+	font=\normalsize,
+	linefill=\TOCLineLeaderFill
+]{table}{table}
+
+% --- INHALTLICHE PAKETE ---
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[printonlyused, withpage]{acronym}
+\usepackage{microtype}
 
 % --- CODE, ZITATE & QUELLEN ---
 \usepackage{minted}
 \usemintedstyle{friendly}
-\usepackage{csquotes} % MUSS nach minted/fvextra geladen werden
+\usepackage{csquotes}
 \usepackage[backend=biber, style=apa, sorting=nyt]{biblatex}
 \addbibresource{literature.bib}
 
-% --- INHALTSVERZEICHNIS ---
-\usepackage{tocloft}
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-
-% --- ANDERE PAKETE ---
-\usepackage[printonlyused, withpage]{acronym}
-\usepackage{graphicx}
-\usepackage[hidelinks]{hyperref} % MUSS als letztes Paket geladen werden
+% --- VERLINKUNGEN (IMMER ALS LETZTES LADEN) ---
+\usepackage[hidelinks]{hyperref}
