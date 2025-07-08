@@ -8,7 +8,7 @@
 % --- SEITENLAYOUT & ABSÄTZE ---
 \usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 \usepackage{setspace}
-\onehalfspacing
+\setstretch{1.5}
 \setlength{\parskip}{6pt}
 \setlength{\parindent}{0pt}
 
@@ -24,33 +24,30 @@
 \setkomafont{subsubsection}{\normalfont\fontsize{11}{13}\itshape}
 
 % --- VERZEICHNISSE & TYPOGRAFIE ---
-% Stellt die Überschriften der Verzeichnisse (z.B. "Inhaltsverzeichnis") auf fette Schrift in Textgröße ein
 \setkomafont{disposition}{\normalfont\bfseries}
 
-% Setzt die Schriftgröße für die Einträge in allen Verzeichnissen auf die normale Textgröße (11pt)
 \DeclareTOCStyleEntry[
-	font=\normalsize,
-	linefill=\TOCLineLeaderFill % Füll-Punkte für section-Ebene
-]{section}{section}
-
-\DeclareTOCStyleEntry[
-	font=\normalsize
-]{subsection}{subsection}
-
-\DeclareTOCStyleEntry[
-	font=\normalsize
-]{subsubsection}{subsubsection}
-
-% Anpassung für Abbildungs- und Tabellenverzeichnis
-\DeclareTOCStyleEntry[
-	font=\normalsize,
+	entryformat=\normalsize,
 	linefill=\TOCLineLeaderFill
-]{figure}{figure}
+]{tocline}{section}
 
 \DeclareTOCStyleEntry[
-	font=\normalsize,
+	entryformat=\normalsize
+]{tocline}{subsection}
+
+\DeclareTOCStyleEntry[
+	entryformat=\normalsize
+]{tocline}{subsubsection}
+
+\DeclareTOCStyleEntry[
+	entryformat=\normalsize,
 	linefill=\TOCLineLeaderFill
-]{table}{table}
+]{tocline}{figure}
+
+\DeclareTOCStyleEntry[
+	entryformat=\normalsize,
+	linefill=\TOCLineLeaderFill
+]{tocline}{table}
 
 % --- INHALTLICHE PAKETE ---
 \usepackage{amsmath}
@@ -62,8 +59,8 @@
 % --- CODE, ZITATE & QUELLEN ---
 \usepackage{minted}
 \usemintedstyle{friendly}
-\usepackage{csquotes}
-\usepackage[backend=biber, style=apa, sorting=nyt]{biblatex}
+\usepackage[autostyle=true]{csquotes}
+\usepackage[backend=biber, style=apa, sorting=nyt, language=ngerman]{biblatex}
 \addbibresource{literature.bib}
 
 % --- VERLINKUNGEN (IMMER ALS LETZTES LADEN) ---

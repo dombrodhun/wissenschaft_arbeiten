@@ -12,3 +12,25 @@
 Thumbs.db
 *.swp
 *.swo
+
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.log
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.out
+*.nav
+*.snm
+*.vrb
+_minted*
+*.run.xml
+*.bcf
+
+# LTeX files
+*ltex.json
