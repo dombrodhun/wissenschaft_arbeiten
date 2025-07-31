@@ -1,7 +1,6 @@
-\section*{Aufgabe 2: Literaturverzeichnis und Zitieren}
-\addcontentsline{toc}{section}{Aufgabe 2: Literaturverzeichnis und Zitieren}
+\addsec{Aufgabe 2: Literaturverzeichnis und Zitieren}
 
-\begin{enumerate}
+\begin{enumerate}[leftmargin=*]
 	\itshape{
 	\item Schaue Dir das Literaturverzeichnis in dem von Dir in Aufgabe 1 gewählten Artikel an und führe hieraus drei verschiedene Quellentypen (z. B. Monografie, Artikel aus Sammelband, Zeitschriftenartikel, Internetquelle etc.) auf. Ordne die drei ausgewählten Quellen jeweils den verschiedenen Quellentypen zu. Achte dabei darauf, dass Du die Regeln aus dem Zitierleitfaden verwendest.
 	\item Suche Dir zwei Absätze aus Deinem Artikel aus und verfasse zu jedem der beiden Absätze einen paraphrasierten Text. Das heißt, Du sollst den Text indirekt gemäß den Zitationsregeln aus dem Zitierleitfaden zitieren und in Deinen eigenen Worten wiedergeben.}
@@ -12,19 +11,15 @@
 \subsection*{Bearbeitung Aufgabe 2: Literaturverzeichnis und Zitieren}
 \addcontentsline{toc}{subsection}{Bearbeitung Aufgabe 2: Literaturverzeichnis und Zitieren}
 
-\textbf{Monografie:}
+\textbf{Preprint}
+\fullcitebib{jiang2024}
 
-\fullcite{abbate2017}
+\textbf{Konferenzbeitrag}
+\fullcitebib{cater-steel2005}
 
-\textbf{Preprint:}
+\textbf{Zeitschriftenartikel}
+\fullcitebib{catolino2019}
 
-\fullcite{albrecht2023}
+Zur einheitlichen Evaluation der \glspl{llm} griffen \textcite[5-6]{tambon2025} auf den Benchmark-Datensatz CoderEval zurück, der Funktionen aus realen Python-Projekten enthält. Die Auswahl gegen die im Datensatz ebenfalls vorhandenen Java-Funktionen wurde bewusst zur Reduktion des Arbeitsaufwandes getroffen. \citeauthor{tambon2025} begründeten den Vorzug von Python außerdem mit dessen weiter Verbreitung und der besseren Repräsentation in Benchmarks. Um die Auswirkungen verschiedener Prompting-Techniken zu analysieren, wurden die Modelle sowohl mit dem Docstring als auch mit einer von Menschen erstellten Beschreibung der jeweiligen Funktion konfrontiert. Die so generierten Code-Beispiele dienten als Grundlage für die Analyse der entstehenden Fehlermuster.
 
-\textbf{Konferenz-Paper:}
-
-\fullcite{capel2023}
-
-
-Ein qualitativer Stichprobenplan wurde entwickelt, um eine vielfältige Perspektive hinsichtlich der auszuwählenden Expert:innen sicherzustellen \parencite[S. 411]{steinmann2024}. Dieser Plan identifizierte drei wesentliche Merkmale für die Teilnehmer, die als besonders relevant für die Forschungsfrage erachtet wurden: Mindestens drei Jahre relevante Berufserfahrung im Bereich Marketing, mindestens vier Stunden pro Woche für die Erstellung von zielgruppenspezifischen Texten und vielfältige Erfahrungen mit verschiedenen Textformaten. Das resultierende Interviewsample bestand aus Expert:innen mit durchschnittlich 15 Jahren Berufserfahrung in den Bereichen Marketing, Content Creation und Texterstellung.
-
-Die beruflichen Hauptaufgaben der Befragten umfassten verschiedene Tätigkeiten im Zusammenhang mit der Erstellung und Optimierung von Texten, hauptsächlich im Bereich des Content Marketings \parencite[S. 411]{steinmann2024}. Darüber hinaus trugen die breite praktische Orientierung und die vielfältigen Erfahrungen der Expert:innen zu einer neutraleren Bewertung des \ac{KI}-generierten Textes bei, was eine objektivere Auswertung der Meinungen ermöglichte.
+Die für die Studie herangezogene Version des Datensatzes umfasste die Open-Source-Modelle CodeGen und PanGu-Coder sowie das proprietäre Modell Codex, welches die Basis für GitHub Copilot bildet \parencite[6-7]{tambon2025}. Um Fehler im generierten Code zu identifizieren, wurde dieser automatisiert mittels Unit-Tests geprüft. Code-Schnipsel, die zu einem Testfehler oder einem unerwarteten Programmabbruch führten, wurden als fehlerhaft klassifiziert und für die empirische Untersuchung verwendet.

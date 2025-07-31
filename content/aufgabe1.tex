@@ -1,36 +1,41 @@
-\section*{Aufgabe 1: Wissenschaftstheorie}
-\addcontentsline{toc}{section}{Aufgabe 1: Wissenschaftstheorie}
+\addsec{Aufgabe 1: Wissenschaftstheorie}
 
-\begin{enumerate}
-	\itshape{
-	\item Suche Dir einen wissenschaftlichen Artikel aus dem Fachgebiet der IT und Technik aus (z.B. aus einer Fachzeitschrift, einem Fachbuch, Sammelband oder Conference Proceedings). Wähle dabei einen Artikel, der nicht im Skript erwähnt wird. Die Quelle muss die Kriterien für eine gute wissenschaftliche Arbeit erfüllen, um damit diese und die folgenden Workbook Aufgaben zu bearbeiten (z.B. typische Struktur, hinreichende Länge und Literaturverzeichnis mit mehreren Quellen). Nutze hierfür bevorzugt die Online-Bibliothek der Library and Information Services (LIS). Führe den Artikel mit vollständigen Literaturangaben gemäß den Regelungen aus dem Skript/Zitierleitfaden auf.
+\begin{enumerate}[leftmargin=*]
+	\itshape
+	\item Suche Dir einen wissenschaftlichen Artikel aus dem Fachgebiet der IT und Technik aus (z.B. aus einer Fachzeitschrift, einem Fachbuch, Sammelband oder Conference Proceedings). Wähle dabei einen Artikel, der nicht im Skript erwähnt wird. Die Quelle muss die Kriterien für eine gute wissenschaftliche Arbeit erfüllen, um damit diese und die folgenden Workbook Aufgaben zu bearbeiten (z.B. typische Struktur, hinreichende Länge und Literaturverzeichnis mit mehreren Quellen). Nutze hierfür bevorzugt die Online-Bibliothek der \gls{lis}. Führe den Artikel mit vollständigen Literaturangaben gemäß den Regelungen aus dem Skript/Zitierleitfaden auf.
 	\item Fasse
-	      \begin{enumerate}
+	      \begin{enumerate}[label=\arabic*.]
 		      \item die Problemstellung/den Hintergrund des Artikels,
 		      \item die Zielsetzung/Forschungsfrage(n)/Ziele und
 		      \item die wesentlichen Ergebnisse und Schlussfolgerungen aus dem Artikel in eigenen Worten zusammen. Das heißt, Du sollst den Text indirekt zitieren, gemäß den Zitationsregeln aus dem Skript und Zitierleitfaden.
 	      \end{enumerate}
-	\item Bestimme die Forschungsmethodik aus dem Artikel und nenne drei Argumente, warum es sich um eine qualitative bzw. quantitative Forschungsmethodik oder bspw. um eine Literatur- oder Übersichtsarbeit handelt.}
+	\item Bestimme die Forschungsmethodik aus dem Artikel und nenne drei Argumente, warum es sich um eine qualitative bzw. quantitative Forschungsmethodik oder bspw. um eine Literatur- oder Übersichtsarbeit handelt.
 \end{enumerate}
+\upshape
 
 \clearpage
 
 \subsection*{Bearbeitung Aufgabe 1: Wissenschaftstheorie}
 \addcontentsline{toc}{subsection}{Bearbeitung Aufgabe 1: Wissenschaftstheorie}
 
-\fullcite{steinmann2024}
+\fullcitebib{tambon2025}
 
-Der Artikel behandelt die Herausforderung, wie \ac{KI} im Content Marketing optimal genutzt werden kann, um qualitativ hochwertige Texte zu erzeugen \parencite[S. 402-404]{steinmann2024}. Besonders wichtig ist dabei die menschliche Eingabe, der sogenannte Prompt, der maßgeblich die Qualität des erzeugten Textes beeinflusst. Nach Steinmann und Piazza fehlt es aktuell an klaren Anleitungen und Techniken, um durch gezieltes Prompting die Qualität der KI-generierten Texte zu gewährleisten, sodass sie den Anforderungen im Content Marketing entsprechen.
+\textcite[1-2]{tambon2025} argumentieren, dass von \glspl{llm} generierter Code erfolgversprechend genutzt wird, allerdings auch Fehler enthält. Die Eigenschaften und Muster der \gls{llm}-Fehler bei der Codegenerierung sind bislang kaum untersucht. Es ist unklar, wie sich die \gls{llm}-Fehler von menschlichen Fehlern im Code unterscheiden.
 
-\textcite[S.404]{steinmann2024} untersuchen, wie sich die Textausgabe von ChatGPT durch gezieltes Prompt Engineering steuern lässt, um die Qualitätskriterien im Content Marketing zu erfüllen. Im Kern ihrer Forschung steht die Frage, welche Prompt-Strukturen und -Techniken besonders effektiv sind, um hochwertige Marketingtexte zu generieren (S.402, 407).
-
-Wesentlichen Ergebnisse der Studie zeigen, dass die Techniken des Zero-shot Chain-of-Thought und des One-shot Promptings besonders effektiv genutzt werden können, um die Qualität der von ChatGPT generierten Texte zu verbessern \parencite[S. 412]{steinmann2024}. Diese Prompting-Techniken ermöglichen eine gezielte Steuerung des \ac{KI}-generierten Outputs in Richtung der definierten Erfolgskriterien für Content Marketing Texte. Zudem werden die gegenwärtigen Schwächen von \ac{KI}-generierten Texten wie mangelnde Emotionalität und stilistische Mängel aufgezeigt. Die Schlussfolgerung ist, dass eine kollaborative Wertschöpfung von Mensch und \ac{KI} erforderlich ist, um die Qualität der generierten Texte zu maximieren und die definierten Qualitätsziele zu erreichen (S. 413).
-
-Die Methodik der Forschung von \textcite[S. 406-412]{steinmann2024} basiert auf der \ac{DSRM}. In dieser Arbeit  wird die \ac{DSRM} überwiegend qualitativ verwendet. Drei Argumente, warum es sich hierbei um eine qualitative Forschungsmethodik handelt, sind:
+\textcite[3]{tambon2025} gehen auf zwei Forschungsfragen präziser ein:
 \begin{enumerate}
-	\item Die Erstellung eines nicht quantifizierbaren Artefakts (effektive Prompt-Struktur), dessen Qualität durch die Einschätzungen der generierten Texte beurteilt wird.
-	\item Die Evaluation der durch die KI generierten Texte erfolgt durch Interviews mit Experten, welche ihre Einschätzung zum generierten Text geben.
-	\item Der iterative Prozess der Entwicklung und Anpassung des Prompts basiert auf kontinuierlichem qualitativem Feedback, anstatt auf quantitativen Messungen.
+	\item \enquote{What are the characteristics of bugs occurring in code generated by LLMs for real-world project tasks?}
+	\item \enquote{To what extent are the identified bug patterns in LLM-generated code relevant for software practitioners and researchers working with LLMs?}
 \end{enumerate}
+Durch die Beantwortung wird sich ein besseres Verständnis von durch \gls{llm} generierten Fehlern versprochen, um die Qualitätssicherung in dem Bereich zu unterstützen.
 
-Diese Argumente unterstreichen die qualitative Natur der hier gebrauchten Methodik.
+Das Ergebnis der Codeanlyse sind zehn distinkte Fehlermuster, die in einer Taxonomie organisiert werden \parencite[12]{tambon2025}. Diese Fehlermuster werden in einer Umfrage bestätigt. Aus der Umfrage gehen ebenfalls drei weitere Fehlergruppen hervor, die für zukünftige Forschung wichtig werden könnten. Unter den Fehlermustern finden sich für den Menschen eher untypische, z.B. halluzinierte Objekte. Moderne \glspl{ide} unterstützen bei der Auffindnug und der Korrektur einiger Fehlermustern, aber Fehler wie \gls{npc} sind schwer zu erkennen, da sie Augenscheinlich korrekt sind.
+
+Bei der empirischen Studie von \textcite{tambon2025} handelt es sich um eine Methodentriangulation:
+\begin{enumerate}
+	\item Die Autoren nutzten die Open Coding Methodologie, bei der sie Fehler im Code analysierten und kategorisierten. Dieser Prozess ist rein qualitativ.
+	\item Die Autoren analysierten die Häufigkeitsverteilungen der Fehler über verschiedene \glspl{llm} und nutzten statistische Tests (Fisher-Exakt-Test). Hierbei handelt es sich um quantitative Forschung.
+	\item Sie führten zwei Umfragen durch, um Ihre Ergebnisse zu validieren und statistische Analysen durchzuführen. Hierzu nutzten sie sowohl qualitative, als auch quantitative Methoden.
+\end{enumerate}
+Die Methodentriangulation unterstützt die Forschenden die Vorteile beider Methodiken für Ihre Arbeit zu nutzen.
+

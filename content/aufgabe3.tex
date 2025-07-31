@@ -1,11 +1,11 @@
-\addsec{Aufgabe 3: Anwendung guter wissenschaftlicher Praxis I: Themenfindung und Datenbankrecherche}
+\addsec[Aufgabe 3: Anwendung guter wissenschaftlicher Praxis I]{Aufgabe 3: Anwendung guter wissenschaftlicher Praxis I: Themenfindung und Datenbankrecherche}
 
-\begin{enumerate}
+\begin{enumerate}[leftmargin=*]
 	\itshape{
 	\item Überlege Dir ein Thema für eine wissenschaftliche Arbeit aus Deinem Fach- bzw. Studiengebiet, also zum Beispiel für eine Seminar-, Projekt- oder Abschlussarbeit. Formuliere einen eigenen aussagekräftigen Titel für Deine wissenschaftliche Arbeit.
 	\item Nun sollst Du zu Deinem Thema passende Literatur finden.
 	      \begin{enumerate}
-		      \item Benenne fünf Suchbegriffe in Deutsch oder Englisch, die zu Deinem Thema passen und führe eine Recherche bevorzugt in der Online-Bibliothek der Library and Information Services (LIS) aus. Nutze hierbei mindestens einmal auch die booleschen Operatoren. Führe die Suchbegriffe in einer Tabelle auf.
+		      \item Benenne fünf Suchbegriffe in Deutsch oder Englisch, die zu Deinem Thema passen und führe eine Recherche bevorzugt in der Online-Bibliothek der \acrfull{lis} aus. Nutze hierbei mindestens einmal auch die booleschen Operatoren. Führe die Suchbegriffe in einer Tabelle auf.
 		      \item Führe fünf wissenschaftliche Quellen in einem Literaturverzeichnis auf, die Du mittels der Recherche gefunden hast. Erstelle das Literaturverzeichnis gemäß den Regelungen, die Du im Zitierleitfaden findest.
 	      \end{enumerate}}
 \end{enumerate}
@@ -13,5 +13,33 @@
 \clearpage
 
 \subsection*{Bearbeitung Aufgabe 3: Anwendung guter wissenschaftlicher Praxis I: Themenfindung und Datenbankrecherche}
-\addcontentsline{toc}{subsection}{Bearbeitung Aufgabe 3: Anwendung guter wissenschaftlicher Praxis I: Themenfindung und Datenbankrecherche}
+\addcontentsline{toc}{subsection}{Bearbeitung Aufgabe 3: Anwendung guter wissenschaftlicher Praxis I}
 
+
+Der aussagekräftige Titel für die wissenschaftliche Arbeit lautet \enquote{\textbf{\acrlong{ml}-Algorithmen zur automatischen Kategorisierung von Banktransaktionen: Eine Vergleichsanalyse}}.
+
+\setcounter{table}{0}
+\begin{table}[htbp]
+	\renewcommand{\arraystretch}{1.5}
+	\caption{Tabelle der Suchbegriffe mit booleschen Operatoren}
+	\label{tab:suchbegriffe}
+	\begin{tabularx}{\textwidth}{|l| X| c |X| c| X|}
+		\hline
+		1 & (\enquote{text classification} OR \enquote{text categorization}) & AND & (banking OR \enquote{bank transaction})                 &     &                                                         \\
+		\hline
+		2 & (classification OR categorization)                               & AND & (banking OR \enquote{bank transaction})                 & AND & (\enquote{machine learning} OR \enquote{deep learning}) \\
+		\hline
+		3 & (\enquote{text classification} OR \enquote{text categorization}) & AND & (\enquote{machine learning} OR \enquote{deep learning}) &     &                                                         \\
+		\hline
+		4 & (\enquote{text classification} OR \enquote{text categorization}) & AND & bert                                                    &     &                                                         \\
+		\hline
+		5 & (\enquote{text classification} OR \enquote{text categorization}) & AND & \enquote{support vector machine}                        &     &                                                         \\
+		\hline
+	\end{tabularx}
+\end{table}
+
+\fullcitebib{allegue2023}\vspace{-12pt}
+\fullcitebib{garcia-mendez2020}\vspace{-12pt}
+\fullcitebib{kotios2022}\vspace{-12pt}
+\fullcitebib{li2022}\vspace{-12pt}
+\fullcitebib{minaee2021}\vspace{-12pt}

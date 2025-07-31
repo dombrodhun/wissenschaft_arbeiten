@@ -1,4 +1,5 @@
 % settings.tex
+\documentclass[11pt, a4paper, ngerman, bibliography=totoc, listof=totoc, toc=sectionentrywithdots, captions=nooneline]{scrartcl}
 
 % --- GRUNDEINSTELLUNGEN & SPRACHE ---
 \usepackage[ngerman]{babel}
@@ -6,55 +7,35 @@
 \setmainfont{Arial}
 
 % --- SEITENLAYOUT & ABSÄTZE ---
-\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm, footskip=1.2cm, head=21pt]{geometry}
+\setlength{\footheight}{21pt}
 \usepackage{setspace}
 \setstretch{1.5}
+\setcaptionalignment{l}
 \setlength{\parskip}{6pt}
 \setlength{\parindent}{0pt}
+\usepackage{enumitem}
+\DeclareTOCStyleEntry[indent=0.0em, numwidth=1.5em]{default}{table}
 
-% --- KOPF-, FUSSZEILE & FUSSNOTEN (KOMA-WEG) ---
+% --- KOPF-, FUSSZEILE & FUSSNOTEN ---
 \usepackage{scrlayer-scrpage}
 \clearpairofpagestyles
 \cfoot{\thepage}
-\setkomafont{footnote}{\fontsize{10}{12}\selectfont}
 
-% --- ÜBERSCHRIFTEN (KOMA-WEG) ---
-\setkomafont{section}{\normalfont\fontsize{12}{14}\bfseries}
-\setkomafont{subsection}{\normalfont\fontsize{11}{13}\bfseries}
-\setkomafont{subsubsection}{\normalfont\fontsize{11}{13}\itshape}
-
-% --- VERZEICHNISSE & TYPOGRAFIE ---
-\setkomafont{disposition}{\normalfont\bfseries}
-
-\DeclareTOCStyleEntry[
-	entryformat=\normalsize,
-	linefill=\TOCLineLeaderFill
-]{tocline}{section}
-
-\DeclareTOCStyleEntry[
-	entryformat=\normalsize
-]{tocline}{subsection}
-
-\DeclareTOCStyleEntry[
-	entryformat=\normalsize
-]{tocline}{subsubsection}
-
-\DeclareTOCStyleEntry[
-	entryformat=\normalsize,
-	linefill=\TOCLineLeaderFill
-]{tocline}{figure}
-
-\DeclareTOCStyleEntry[
-	entryformat=\normalsize,
-	linefill=\TOCLineLeaderFill
-]{tocline}{table}
+% --- SCHRIFTARTEN GRÖßEN ---
+\setkomafont{sectionentry}{\normalsize\bfseries}
+\setkomafont{footnote}{\fontsize{10}{1.5}\selectfont}
+\setkomafont{section}{\normalfont\fontsize{12}{1.5}\bfseries}
+\setkomafont{subsection}{\normalfont\fontsize{12}{1.5}\bfseries}
+\setkomafont{subsubsection}{\normalfont\fontsize{12}{1.5}\bfseries}
 
 % --- INHALTLICHE PAKETE ---
 \usepackage{amsmath}
 \usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage{graphicx}
-\usepackage[printonlyused, withpage]{acronym}
 \usepackage{microtype}
+\usepackage[normalem]{ulem}
 
 % --- CODE, ZITATE & QUELLEN ---
 \usepackage{minted}
@@ -62,6 +43,26 @@
 \usepackage[autostyle=true]{csquotes}
 \usepackage[backend=biber, style=apa, sorting=nyt, language=ngerman]{biblatex}
 \addbibresource{literature.bib}
+\setlength{\bibhang}{1.27cm}
+\DefineBibliographyStrings{ngerman}{%
+	bibliography = {Literaturverzeichnis},
+	references = {Literaturverzeichnis},
+}
 
-% --- VERLINKUNGEN (IMMER ALS LETZTES LADEN) ---
+% --- VERLINKUNGEN (IMMER ALS LETZTES LADEN) --- 
 \usepackage[hidelinks]{hyperref}
+
+% --- GLOSSARE, ABKÜRZUNGEN & SYMBOLVERZEICHNIS ---
+\usepackage[toc, acronym, nopostdot, translate=babel, nonumberlist, nogroupskip]{glossaries}
+\setglossarystyle{long}
+\renewenvironment{theglossary}%
+{\noindent\begin{longtable}[l]{@{}lp{\glsdescwidth}}}%
+		{\end{longtable}}
+\renewcommand{\glossarypreamble}{\vspace{-0.9em}}
+\renewcommand{\glsnamefont}[1]{\textbf{#1}}
+\addto\captionsngerman{%
+	\renewcommand*{\acronymname}{Abkürzungsverzeichnis}
+}
+\makeglossaries
+
+

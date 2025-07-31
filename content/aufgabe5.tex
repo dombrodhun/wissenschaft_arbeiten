@@ -1,0 +1,37 @@
+\addsec{Aufgabe 5: Forschungsmethoden}
+
+\begin{enumerate}[leftmargin=*]
+	\itshape{
+	\item Bestimme die geeignete Forschungsmethodik für Deine wissenschaftliche Arbeit aus Aufgabe 3 und
+	      beschreibe die passende Methodik. Was willst Du entwickeln, welche Experimente willst Du durchführen,
+	      welche Daten erheben? Du sollst nur die Erhebungs- und Auswertungsmethode \uline{beschreiben}. Es ist nicht
+	      nötig, dass Du einen Prüfplan, Fragebogen oder ein anderes Instrument entwirfst.
+	\item Begründe, warum die gewählte Forschungsmethodik geeignet für die Beantwortung Deiner
+	      Forschungsfrage(n) ist.
+	      }
+\end{enumerate}
+
+\clearpage
+
+\subsection*{Bearbeitung Aufgabe 5: Forschungsmethoden}
+\addcontentsline{toc}{subsection}{Bearbeitung Aufgabe 5: Forschungsmethoden}
+
+Für die Vergleichsanalyse von \acrlong{ml}-Algorithmen zur Banktransaktions-Kategorisierung wird ein quantitativ-experimenteller Ansatz gewählt. Dieser Ansatz ist darauf ausgelegt, die Leistung verschiedener Modelle objektiv zu messen und zu vergleichen.
+
+Die Untersuchung folgt einer standardisierten Pipeline, um reproduzierbare Ergebnisse zu gewährleisten.
+
+\textbf{Entwicklung und Experiment:}
+Es wird eine Verarbeitungspipeline in Python entwickelt. Diese beinhaltet die Datenvorverarbeitung (Tokenisierung, Stoppwort-Entfernung, Kleinschreibung) und die Merkmalsextraktion mittels \gls{tfidf}, um Textbeschreibungen in numerische Vektoren zu überführen. Anschließend werden etablierte Klassifikationsalgorithmen wie \gls{svm}, \gls{nb} und Ensemble-Methoden (\gls{rf}, \gls{catboost}) auf einem identischen Datensatz trainiert und mittels Kreuzvalidierung getestet.
+
+\textbf{Datenerhebung und Auswertung:}
+Aufgrund von Datenschutzauflagen wird ein öffentlicher, anonymisierter Datensatz (z.B. von Kaggle) oder ein synthetischer Datensatz verwendet. Die Modellevaluierung erfolgt quantitativ anhand der Metriken Precision, Recall und F1-Score. Wegen der ungleichen Kategorienverteilung wird der Makro-Mittelwert genutzt. Diese Metrik stellt sicher, dass alle Kategorien gleich gewichtet werden und die Leistung bei selteneren Klassen nicht von den häufigen Klassen überdeckt wird. Eine Konfusionsmatrix dient der Detailanalyse.
+
+Der gewählte Ansatz ist ideal für dieses Forschungsvorhaben:
+
+\textbf{Zielgerichtet:} Ein experimenteller Vergleich liefert eine direkte und empirisch gestützte Antwort auf die zentrale Forschungsfrage, welcher Algorithmus die beste Leistung für die gegebene Aufgabe erbringt.
+
+\textbf{Objektiv und Reproduzierbar:} Die Verwendung standardisierter, numerischer Metriken ermöglicht einen objektiven Leistungsvergleich der Modelle. Die Methodik ist transparent und kann von Dritten nachvollzogen werden.
+
+\textbf{Wissenschaftlich fundiert:} Das Vorgehen orientiert sich am etablierten Stand der Technik, wie er in den als Referenz dienenden wissenschaftlichen Arbeiten von \textcite{allegue2023, garcia-mendez2020, kotios2022, ta2023} demonstriert wird.
+
+\textbf{Realistisch:} Die Implementierung und Evaluation existierender Algorithmen ist im vorgegebenen Zeitrahmen von elf Wochen machbar.
